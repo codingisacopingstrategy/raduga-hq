@@ -1,0 +1,57 @@
+body {
+    font-family: 'NotCourierSans', monospace;
+    line-height: 19px;
+    padding: 8px;
+}
+td {
+    padding: 0 2px;
+}
+td.scriptname {
+    width: 106px;
+}
+td.time {
+    width: 145px;
+}
+td.lineno {
+    width: 53px;
+}
+
+table {
+    width: 100%
+}
+
+pre,
+code {
+  font-family: monospace, 'NotCourierSans';
+}
+
+h1 {
+  font-size: 26px;
+  line-height: 38px;
+}
+h2 {
+  font-size: 19.5px;
+  line-height: 38px;
+}
+h3 {
+  font-size: 15.209999999999999px;
+  line-height: 19px;
+}
+h4 {
+  font-size: 13px;
+  line-height: 19px;
+}
+h5 {
+  font-size: 10.79px;
+  line-height: 19px;
+}
+h6 {
+  font-size: 9.75px;
+  line-height: 19px;
+}
+
+div.photo {
+    border-top: 1px dotted #ccc;
+    border-bottom: 1px dotted #ccc;
+    
+}

@@ -1,0 +1,22 @@
+<head>
+    <title>raduga-hq</title>
+</head>
+
+<body>
+  {{> photos}}
+</body>
+
+<template name="photos">
+    <h1>Photos {{ urls }}</h1>
+    {{#each photos}}
+    <div class="photo" property="dc:identifier" value="{{id}}">
+        <h2>Spotted by {{user.username}} near {{custom_fields.name_en}} / {{custom_fields.name_ru}}</h2>
+        <p><img src="{{ urls.medium_640 }}" /></p>
+        <p>{{id}}</p>
+        <p><button type="button" class="delete" value="× Delete" rel="{{_id}}">Delete</button>
+            Visibility: {{processed}} {{#if processed}}<button type="button" class="hide" value="Hide" rel="{{_id}}">Hide</button>{{else}}
+            <button type="button" class="show" value="Show" rel="{{_id}}">Show</button>
+            {{/if}}</p>
+    </div>
+    {{/each}}
+</template>
