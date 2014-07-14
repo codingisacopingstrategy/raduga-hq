@@ -6,7 +6,7 @@ var str2ID = function(id) {
 }
 
 Template.photos.photos = function () {
-    var photos = Photos.find();
+    var photos = Photos.find({}, { sort: {"created_at":-1} });
     if (!photos) { return []; }
     return photos;
 };
