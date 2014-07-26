@@ -1,9 +1,9 @@
 var str2ID = function(id) {
     id = id.replace('ObjectID("','');
     id = id.replace('")','');
-    id = new Meteor.Collection.ObjectID(id)
+    id = new Meteor.Collection.ObjectID(id);
     return id;
-}
+};
 
 Template.photos.photos = function () {
     var photos = Photos.find({}, { sort: {"created_at":-1} });

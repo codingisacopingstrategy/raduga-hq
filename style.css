@@ -52,6 +52,10 @@ h6 {
 
 div.photo {
     border-top: 1px dotted #ccc;
-    border-bottom: 1px dotted #ccc;
-    
+    width: 640px;
+    margin-bottom: 19px;
+}
+
+span[property=id] {
+    float: right;
 }
