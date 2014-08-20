@@ -9,14 +9,16 @@
 <template name="photos">
     <h1>Photos {{ urls }}</h1>
     {{#each photos}}
-    <div class="photo" property="dc:identifier" value="{{id}}">
+    <div class="photo {{#if processed}}processed{{else}}hidden{{/if}}" property="dc:identifier" value="{{id}}">
         <h2>Spotted by {{user.username}} near {{custom_fields.name_en}} / {{custom_fields.name_ru}}</h2>
         <p><img src="{{ urls.medium_640 }}" /></p>
         <p><span property="created_at">{{created_at}}</span> <span property="id">{{id}}</span></p>
-        <p><button type="button" class="delete" value="× Delete" rel="{{_id}}">Delete</button>
+        <p>
             Visibility: {{#if processed}}<button type="button" class="hide" value="Hide" rel="{{_id}}">Hide</button>{{else}}
             <button type="button" class="show" value="Show" rel="{{_id}}">Show</button>
-            {{/if}}</p>
+            {{/if}}
+            <button type="button" class="delete" value="× Delete" rel="{{_id}}">Delete</button>
+        </p>
     </div>
     {{/each}}
 </template>

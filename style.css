@@ -56,6 +56,10 @@ div.photo {
     margin-bottom: 19px;
 }
 
+div.photo.hidden img {
+    width: 100px;
+}
+
 span[property=id] {
     float: right;
 }
