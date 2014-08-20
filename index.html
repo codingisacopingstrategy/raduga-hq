@@ -14,7 +14,7 @@
         <p><img src="{{ urls.medium_640 }}" /></p>
         <p><span property="created_at">{{created_at}}</span> <span property="id">{{id}}</span></p>
         <p><button type="button" class="delete" value="× Delete" rel="{{_id}}">Delete</button>
-            Visibility: {{processed}} {{#if processed}}<button type="button" class="hide" value="Hide" rel="{{_id}}">Hide</button>{{else}}
+            Visibility: {{#if processed}}<button type="button" class="hide" value="Hide" rel="{{_id}}">Hide</button>{{else}}
             <button type="button" class="show" value="Show" rel="{{_id}}">Show</button>
             {{/if}}</p>
     </div>
